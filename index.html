@@ -7,30 +7,27 @@
 
   <!-- Reveal.js CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/black.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/theme/moon.css">
+
+  <!-- Highlight para código si necesitas -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/monokai.css">
 </head>
 <body>
 
   <div class="reveal">
-    <div class="slides">
-      <section>Slide 1: Título</section>
-      <section>
-        Slide 2: Contenido
-        <ul>
-          <li>Punto 1</li>
-          <li>Punto 2</li>
-        </ul>
-      </section>
-      <section>Slide 3: Conclusión</section>
+    <div class="slides" data-markdown="slides.md" data-separator="^\n---\n" data-vertical="^\n--\n">
+      <!-- El contenido se carga desde slides.md -->
     </div>
   </div>
 
-  <!-- Reveal.js -->
   <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4/plugin/highlight/highlight.js"></script>
   <script>
     Reveal.initialize({
       hash: true,
-      slideNumber: true
+      slideNumber: true,
+      plugins: [ RevealMarkdown, RevealHighlight ]
     });
   </script>
 </body>
